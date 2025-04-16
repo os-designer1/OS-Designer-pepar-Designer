@@ -24,21 +24,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
-
-
-var swiper = new Swiper(".mySwiper", {
-    loop: true, // تشغيل التكرار المستمر
-    autoplay: {
-        delay: 3000, // تغيير الصورة كل 3 ثواني
-        disableOnInteraction: false, // لا يتوقف عند تفاعل المستخدم
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-});
