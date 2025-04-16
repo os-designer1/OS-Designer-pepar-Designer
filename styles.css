@@ -109,32 +109,58 @@ body{
     }
     
 }
-.header2-nav button {
-    font-family: "Zain", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    background-color: #1f53ff;
-    color: white;
-    border: none;
-    padding: 5px 20px;
-    border-radius: 25px;
-    cursor: pointer;
-    font-size: 15px;
-    font-weight: bold;
-    margin-left: 40px;
-    margin-right: 50px;
-}
-.header2-nav a {
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-}
 
 .Social {
     text-decoration: none;
     color: white;
     font-size: 20px;
 }
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .search-bar {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: white;
+    padding: 2px 2px;
+    border-radius: 20px;
+  }
+
+  .search-bar input {
+    width: 200px;
+    padding: 5px 10px;
+    font-size: 1rem;
+    border: 2px solid #00a2ff;
+    border-radius: 25px;
+  }
+
+  .search-icon {
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #ffffff;
+  }
+
+  @media (min-width: 768px) {
+    .search-bar {
+      position: static;
+      display: block !important;
+      box-shadow: none;
+      background: transparent;
+    }
+
+    .search-bar input {
+      width: 250px;
+    }
+
+    .search-icon {
+      display: none;
+    }
+  }
 @media (max-width: 834px) {
     .header2-nav button {
         font-size: 12px;
