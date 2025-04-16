@@ -24,11 +24,122 @@
         <div class="menu-icon" onclick="toggleNav()">☰</div>
         </div>
 
-        <div class="header2">
-            <a class="Social" href="">خدمات ورقيه</a>
+        <head>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+            <style>
+              .header2 {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background-color: #f9f9f9;
+                padding: 10px 20px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                position: relative;
+              }
+          
+              .header2 .Social {
+                font-size: 1.2rem;
+                text-decoration: none;
+                color: #333;
+                font-weight: bold;
+              }
+          
+              .search-container {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+              }
+          
+              .search-bar {
+                display: none;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background-color: white;
+                padding: 8px 12px;
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+              }
+          
+              .search-bar input {
+                width: 200px;
+                padding: 5px 10px;
+                font-size: 1rem;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+              }
+          
+              .search-icon {
+                cursor: pointer;
+                font-size: 1.2rem;
+                color: #333;
+              }
+          
+              @media (min-width: 768px) {
+                .search-bar {
+                  position: static;
+                  display: block !important;
+                  box-shadow: none;
+                  background: transparent;
+                }
+          
+                .search-bar input {
+                  width: 250px;
+                }
+          
+                .search-icon {
+                  display: none;
+                }
+              }
+            </style>
+          </head>
+          
+          <body>
+            <div class="header2">
+              <a class="Social" href="">خدمات ورقيه</a>
+          
+              <div class="search-container">
+                <div class="search-icon" onclick="toggleSearchBar()">
+                  <i class="fas fa-search"></i>
+                </div>
+                <div class="search-bar" id="searchBar">
+                  <input type="text" id="searchInput" placeholder="ابحث عن منتج..." oninput="searchProducts()">
+                </div>
+              </div>
+            </div>
+          
+            <script>
+              function toggleSearchBar() {
+                const searchBar = document.getElementById('searchBar');
+                if (window.innerWidth < 768) {
+                  searchBar.style.display = searchBar.style.display === 'block' ? 'none' : 'block';
+                }
+              }
+          
+              function searchProducts() {
+                const input = document.getElementById('searchInput').value.toLowerCase();
+                const products = document.querySelectorAll('.product-card');
+                products.forEach(product => {
+                  const title = product.querySelector('.product-title').textContent.toLowerCase();
+                  product.style.display = title.includes(input) ? 'block' : 'none';
+                });
+              }
+          
+              // إغلاق البحث لما المستخدم يضغط براها
+              document.addEventListener('click', function (e) {
+                const searchBar = document.getElementById('searchBar');
+                const searchIcon = document.querySelector('.search-icon');
+                if (!searchBar.contains(e.target) && !searchIcon.contains(e.target) && window.innerWidth < 768) {
+                  searchBar.style.display = 'none';
+                }
+              });
+            </script>
+          </body>
+          
+            <style>
+               
+            </style>
             <div class="header2-nav">
-                <a class="support" href="https://os-designer1.github.io/support/">الدعم</a>
-                <a href="https://os-designer1.github.io/ordar/"><button>اطلب </button></a>
             </div>
           </div>
 
@@ -43,7 +154,6 @@
 
             <div class="contenar1">
                 <h1>خدمات ورقيه</h1>
-                <p>جميع تصميمات الأوراق بشياكه</p>
                 <h3> الأبداع يبدا من هنا OS-Designer مع </h3>
             </div>
 
@@ -51,7 +161,6 @@
             
             <div class="container">
                 <div class="page-title">
-                    <h1>منتجات اوراقيه</h1>
                     <p>تصفح مجموعة منتجاتنا المخصصة للشركات والمؤسسات و المحلات</p>
                 </div>
                 
@@ -62,7 +171,7 @@
                             <img src="card.png" alt="بطاقات عمل">
                         </div>
                         <div class="product-info">
-                            <h3 class="product-title">بطاقات عمل</h3>
+                            <h3 class="product-title">كارت اعمال</h3>
                             <p class="product-description">بطاقات عمل عالية الجودة بتصاميم مخصصة لتعزيز حضور علامتك التجارية</p>
                             <a href="#" class="view-product">عرض المنتج</a>
                         </div>
@@ -74,7 +183,7 @@
                             <img src="pepar.jpg" alt="أوراق رسمية">
                         </div>
                         <div class="product-info">
-                            <h3 class="product-title">أوراق رسمية</h3>
+                            <h3 class="product-title">اوراق رسميه</h3>
                             <p class="product-description">أوراق رسمية للشركات بطباعة فاخرة تعكس الاحترافية</p>
                             <a href="#" class="view-product">عرض المنتج</a>
                         </div>
@@ -86,7 +195,7 @@
                             <img src="Brochure.jpg" alt="بروشورات">
                         </div>
                         <div class="product-info">
-                            <h3 class="product-title">بروشورات</h3>
+                            <h3 class="product-title">اوراق بروشورات</h3>
                             <p class="product-description">بروشورات دعائية بتصاميم إبداعية لعرض منتجاتك وخدماتك</p>
                             <a href="#" class="view-product">عرض المنتج</a>
                         </div>
@@ -110,7 +219,7 @@
                             <img src="folder.png" alt="فولدر">
                         </div>
                         <div class="product-info">
-                            <h3 class="product-title">فولدر</h3>
+                            <h3 class="product-title">اوراق فولدر</h3>
                             <p class="product-description">فولدر لعرض جميع اعمالك و انجازاتك</p>
                             <a href="#" class="view-product">عرض المنتج</a>
                         </div>
@@ -122,7 +231,7 @@
                             <img src="Flaur.png" alt="كتالوجات">
                         </div>
                         <div class="product-info">
-                            <h3 class="product-title">كتالوجات</h3>
+                            <h3 class="product-title">اوراق كاتالوج</h3>
                             <p class="product-description">كتالوجات منتجات بطباعة عالية الجودة وتصاميم جذابة</p>
                             <a href="#" class="view-product">عرض المنتج</a>
                         </div>
@@ -132,7 +241,7 @@
                             <img src="postar.png" alt="بوستار">
                         </div>
                         <div class="product-info">
-                            <h3 class="product-title">بوستر</h3>
+                            <h3 class="product-title">اوراق بوستر</h3>
                             <p class="product-description">بوسترات دعائية بتصاميم مبتكرة لجذب الانتباه وتعزيز رسالتك التسويقية</p>
                             <a href="#" class="view-product">عرض المنتج</a>
                         </div>
@@ -142,7 +251,7 @@
                             <img src="stickar.png" alt="استيكر">
                         </div>
                         <div class="product-info">
-                            <h3 class="product-title">استيكر</h3>
+                            <h3 class="product-title">اوراق استيكر</h3>
                             <p class="product-description">استيكرات مميزة بتصاميم مبتكرة وجودة طباعة عالية لتلبية جميع احتياجاتك التسويقية والإبداعية</p>
                             <a href="#" class="view-product">عرض المنتج</a>
                         </div>
@@ -152,38 +261,58 @@
                             <img src="ID.png" alt="كارت تعريفي">
                         </div>
                         <div class="product-info">
-                            <h3 class="product-title">الكارت التعريفي</h3>
+                            <h3 class="product-title">الكارت التعريفي ID</h3>
                             <p class="product-description">تصميمات مميزة للكروت التعريفية بأعلى جودة طباعة لتبرز هويتك الشخصية أو التجارية.</p>
                             <a href="#" class="view-product">عرض المنتج</a>
                         </div>
                     </div>
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="https://via.placeholder.com/300x200?text=Catalogs" alt="كتالوجات">
+                            <img src="taplo.png" alt="طابلو">
                         </div>
                         <div class="product-info">
-                            <h3 class="product-title">كتالوجات</h3>
-                            <p class="product-description">كتالوجات منتجات بطباعة عالية الجودة وتصاميم جذابة</p>
+                            <h3 class="product-title">طابلو الصور</h3>
+                            <p class="product-description">طابلوهات صور مميزة بتصاميم فنية رائعة تضيف لمسة جمالية لأي مكان</p>
                             <a href="#" class="view-product">عرض المنتج</a>
                         </div>
                     </div>
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="https://via.placeholder.com/300x200?text=Catalogs" alt="كتالوجات">
+                            <img src="daftar.png" alt="daftar">
                         </div>
                         <div class="product-info">
-                            <h3 class="product-title">كتالوجات</h3>
-                            <p class="product-description">كتالوجات منتجات بطباعة عالية الجودة وتصاميم جذابة</p>
+                            <h3 class="product-title">دفتر الفواتير</h3>
+                            <p class="product-description">دفاتر فواتير مخصصة بتصاميم احترافية وجودة طباعة عالية لتلبية احتياجات عملك</p>
                             <a href="#" class="view-product">عرض المنتج</a>
                         </div>
                     </div>
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="https://via.placeholder.com/300x200?text=Catalogs" alt="كتالوجات">
+                            <img src="rosheta.png" alt="rosheta">
                         </div>
                         <div class="product-info">
-                            <h3 class="product-title">كتالوجات</h3>
-                            <p class="product-description">كتالوجات منتجات بطباعة عالية الجودة وتصاميم جذابة</p>
+                            <h3 class="product-title">دفتر رشتات</h3>
+                            <p class="product-description">تصميمات احترافية للروشتات الطبية تعكس هوية العيادة أو المركز الطبي بجودة طباعة عالية</p>
+                            <a href="#" class="view-product">عرض المنتج</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="cv.png" alt="cv">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">CV</h3>
+                            <p class="product-description">تصميمات احترافية للسير الذاتية تعكس مهاراتك وخبراتك بجودة عالية وإبداع مميز</p>
+                            <a href="#" class="view-product">عرض المنتج</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="book.png" alt="book">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">ورق اغلفه </h3>
+                            <p class="product-description">تصميمات مميزة لأغلفة كتب المدرسين بجودة طباعة عالية تعكس الاحترافية والتميز</p>
                             <a href="#" class="view-product">عرض المنتج</a>
                         </div>
                     </div>

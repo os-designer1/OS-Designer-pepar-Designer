@@ -151,27 +151,7 @@ body{
         font-size: 16px;
     }
 }
-a{
-  color: #1f53ff;
-}
-p {
-    margin-top: 1%;
-  font-size: 18px;
-  color: #ffffff;
-  text-align: center;
-}
 
-.header + p {
-  margin-top: 40px; /* Adjust this value as needed */
-}
-
-@media (max-width: 800px) {
-  p {
-      margin: 20px;
-      margin-top: 5%;
-      font-size: 14px;
-  }
-}
 
 
 
@@ -180,8 +160,6 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 18px;
-
     background-color: #000000ee;
 }
 .contenar1 h1 {
@@ -190,103 +168,37 @@ p {
     -webkit-text-fill-color: transparent;
     font-size: 50px;
     margin-top: 20px;  
-    margin-bottom: 10px;
     text-align: center;
     opacity: 0.3;
     transform: translateY(20px);
     animation: fadeInUp 2s forwards;
 }
-
 @keyframes fadeInUp {
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
-.contenar1 p {
-    color: #ffffff;
-    font-size: 25px;
-    text-align: center;
-    color: #ffffff;
-}
 
-.contenar1 img {
-    width: 20%;
-    height: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-radius: 20px;
-    opacity: 0.3;
-    transform: scale(0.8);
-    transition: box-shadow 2s; /* تأثير ناعم عند تغيير الظل */
-    animation: fadeIn 2s forwards, scaleUp 2s 2s forwards;
-}
 
-@keyframes fadeIn {
-    from {
-        opacity: 0.3;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes scaleUp {
-    from {
-        transform: scale(0.8);
-    }
-    to {
-        transform: scale(1);
-    }
-}
-
-.contenar1 button{
-    font-family: "Zain", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    background-color: #1f53ff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 25px;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 20px;
-}
-
-.contenar1 h2 {
-    color: #ffffff;
-    font-size: 25px;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    text-align: center;
-    
-}
 .contenar1 h3 {
 
     background: linear-gradient(to right,#00a2ff,#8a0dff,#ff521d);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 25px;
-    margin-top: 30px;
+    margin-top: 20px;
    margin-bottom: 50px;
     text-align: center;
     
 }
 @media (max-width: 834px) {
     .contenar1 h1 {
-        font-size: 30px;
-        margin-bottom: 5px;
+        font-size: 40px;
+        margin-top: 50px;
+        margin-bottom: 10px;
     }
-    .contenar1 p {
-        font-size: 18px;
-    }
-    .contenar1 button {
-        font-size: 16px;
-        padding: 8px 16px;
-        margin-top: 10px;
-    }
+
     .contenar1 h2 {
         font-size: 15px;
         margin-top: 20px;
@@ -294,12 +206,10 @@ p {
     }
     .contenar1 h3 {
         font-size: 15px;
-        margin-top: 0px;
+        margin-top: 20px;
         margin-bottom: 50px;
     }
-    .contenar1 img {
-        width: 80%;
-    }
+
 }
 
 
@@ -309,7 +219,7 @@ p {
         
       
         .container{
-         padding: 50px 20px;
+         padding: 10px 20px 30px;
             background-color: #000000ee;
         }
         /* Page Title */
