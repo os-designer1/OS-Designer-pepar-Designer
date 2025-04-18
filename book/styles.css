@@ -179,6 +179,7 @@ body {
 
 .image-section img {
     max-width: 100%;
+    border-radius: 10px;
 }
 
 .info-section {
@@ -260,6 +261,7 @@ body {
     .container {
         flex-direction: column;
     }
+    
 }
 
 .order-container {
