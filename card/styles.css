@@ -433,6 +433,10 @@ body {
     .info-section{
         padding: 0 20px;
     }
+    .image-section img{
+        padding: 10px ;
+        border-radius: 12px;
+    }
 }
 
 
