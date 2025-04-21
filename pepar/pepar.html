@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="logo.png" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <title> ordar-card </title>
+    <title> ordar-pepar </title>
 </head>
 <body>
 
@@ -47,7 +47,7 @@
             </div>
             <div class="info-section">
                <div class="title">
-                    <h1>اطلب كارتك من هنا</h1>
+                    <h1>اطلب ورقك من هنا</h1>
                     <p>يوجد اشتراك شهري وفر 20% او اكتر</p>
                     <div class="descuond">
                         <a href="https://os-designer1.github.io/month-ordar/" class="descuond-1">عرض الشهر الواحد</a>
@@ -55,14 +55,28 @@
                 </div>
     
                 <div class="options">
+
                     <div class="option" onclick="selectOption('logo_text')">
-                        <span>تصميم كارت<br><small> تصميم كارت فريد من نوعه </small></span>
-                        <span class="price">$50 جنيه</span>
+                        <span>كتابه  وجه واحد<br><small></small></span>
+                        <span class="price">$10 جنيه</span>
                     </div>
                     
+                    <div class="option" onclick="selectOption('logo_text')">
+                        <span>كتابه  وجهين <br><small></small></span>
+                        <span class="price">$15 جنيه</span>
+                    </div>
+
+                    <div class="option" onclick="selectOption('logo_text')">
+                        <span>كتابه و طباعه وجه  واحد<br><small></small></span>
+                        <span class="price">$20 جنيه</span>
+                    </div>
                 </div>
                 
-
+                
+                    <div class="option" onclick="selectOption('logo_text')">
+                        <span>كتابه و طباعه وجهين<br><small></small></span>
+                        <span class="price">$25 جنيه</span>
+                    </div>
 
                 <div class="order-container">
                     <form id="form" class="order-form">
@@ -107,7 +121,9 @@
                         <div class="form-group">
                             <label class="form-label">
                                 <select class="input-field" name="designType" required>
-                                    <option value="كارت شخصي"> كارت شخصي  </option>
+                                    <option value="">  اختر نوع الخدمه  </option>
+                                    <option value="كتابه اوراق فقط">  كتابه اوراق فقط  </option>
+                                    <option value="كتابه و طباعه اوراق">  كتابه و طباعه اوراق   </option>
 
                                 </select>
                                 <span class="input-placeholder">نوع التصميم</span>
@@ -130,19 +146,16 @@
                             <label class="form-label">
                                 <select class="input-field" name="styleType" required>
                                     <option value=""> اختر نوع الطباعه </option>
-                                    <option value="سبوت بارز"> سبوت بارز </option>
-                                    <option value="ورق محمل"> ورق محمل </option>
+                                    <option value="سبوت بارز"> ورق جلوسي </option>
+                                    <option value="ورق محمل"> ورق عادي </option>
 
                                 </select>
                                 <span class="input-placeholder">نوع التصميم</span>
                             </label>
                         </div>
 
-                        <div class="form-group">
-                            <label  for="quantity">الكمية</label>
-                            <input class="input-field" type="number" id="quantity" name="quantity" min="1" value="50">
-                          </div>
-                             <p>اقل كميه 50</p>
+                                                       <a style="display: block; background: #0059ff; color: #fff; padding: 8px; border-radius: 4px; text-align: center; text-decoration: none; font-size: 14px; transition: 0.3s; max-width: 230px;" href="https://wa.me/201144898934?text=صوره تصميم عجبني" class="design-link">📤 أرسل صورة التصميم عجبك و عاوز زيو</a>
+
                         <div class="form-group">
                             <label for="notes">ملاحظات إضافية</label>
                             <textarea class="input-field" id="notes" name="notes" rows="3"></textarea>
