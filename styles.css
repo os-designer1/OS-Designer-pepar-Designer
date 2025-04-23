@@ -242,6 +242,46 @@ body{
 
 
 
+.text-pepar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 20px;
+    border-radius: 40px;
+}
+
+.text-pepar h1{
+    color: #000000;
+    font-size: 50px;
+    margin: 0;
+}
+.menu{
+    background: linear-gradient(to right, #ff0000, #00c6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+@media (max-width: 480px){
+    .text-pepar{
+        padding: 0 5px;
+    }
+    .text-pepar h1{
+        font-size: 30px;
+
+    }
+    .menu{
+        font-weight: 900;
+        font-size: 40px;
+    }
+}
+
+
+
+
+
         .container{
          padding: 10px 20px 30px;
          
