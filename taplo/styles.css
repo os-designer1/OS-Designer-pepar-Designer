@@ -401,6 +401,26 @@ body {
 
 
 
+@media (max-width: 600px) {
+    .slider-container {
+        padding-bottom: 0;
+    }
+    .slider-img,
+    .slider-container img {
+        width: 85vw !important;
+        height: auto !important;
+        margin-left: 4vw !important;
+        margin-right: 4vw !important;
+        display: inline-block;
+        border-radius: 12px;
+        object-fit: cover;
+        max-width: 95vw;
+    }
+}
+
+
+
+
 .lorem{
     display: flex;
     align-items: center;
